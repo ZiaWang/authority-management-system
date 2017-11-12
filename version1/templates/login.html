@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+
+<form action="/login/" method="post" novalidate>
+    {% csrf_token %}
+    <p>username: {{ form.username }} {{ form.errors.username.0 }}</p>
+    <p>password: {{ form.password }} {{ form.errors.password.0 }}</p>
+    <input type="submit" value="登陆">
+</form>
+
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

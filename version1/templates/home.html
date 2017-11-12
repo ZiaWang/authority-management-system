@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+
+{% if page_permission.has_showbooks %}
+    <p><a href="">主页</a></p>
+{% endif %}
+
+{% if page_permission.has_showbooks %}
+    <p><a href="">图书列表</a></p>
+{% endif %}
+
+{% if page_permission.has_addbook %}
+    <p><a href="">增加图书</a></p>
+{% endif %}
+
+{% if page_permission.has_delbook %}
+    <p><a href="">删除图书</a></p>
+{% endif %}
+
+{% if page_permission.has_editbook %}
+    <p><a href="">编辑图书</a></p>
+{% endif %}
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
