@@ -5,9 +5,10 @@ from django.core.validators import RegexValidator
 
 
 class LoginForm(Form):
-    """ 用于登陆页面使用的Form组件类
-
     """
+    用于登陆页面使用的Form组件类
+    """
+
     username = fields.CharField(required=True,
                                 error_messages={'required': '用户名不能为空'},
                                 widget=widgets.TextInput(attrs={'placeholder': 'username'}))

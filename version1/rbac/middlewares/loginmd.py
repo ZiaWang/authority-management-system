@@ -17,10 +17,13 @@ class MiddlewareMixin(object):
 class LoginMiddleWare(MiddlewareMixin):
     def process_request(self, request):
         """ 对客户端请求进行session验证
-            参数: request, 请求对象
-            返回值： 1. None, 退出当前中间件，进入下一个中间件或视图函数
-                    2. response响应对象, 不在继续下面的中间件或视图函数，而是将response直接返回给上一个中间件或WSGI
+        Args:
+            request, 请求对象
+        Return：
+            1. None, 退出当前中间件，进入下一个中间件或视图函数
+            2. response响应对象, 不在继续下面的中间件或视图函数，而是将response直接返回给上一个中间件或WSGI
         """
+
         from django.conf import settings
         from django.shortcuts import redirect, HttpResponse
         import re

@@ -3,9 +3,12 @@ from django.db import models
 
 class User(models.Model):
     """ 用户表
-        普通字段: id, username, password
-        关联字段： roles(多对多)
+    普通字段:
+        id, username, password
+    关联字段：
+        roles(多对多)
     """
+
     id = models.AutoField(primary_key=True)
     username = models.CharField(max_length=32, verbose_name='用户名')
     password = models.CharField(max_length=32, verbose_name='密码')
@@ -21,8 +24,10 @@ class User(models.Model):
 
 class Permission(models.Model):
     """ 权限表
-        普通字段: id, url, feature
+    普通字段:
+        id, url, feature
     """
+
     id = models.AutoField(primary_key=True)
     url = models.CharField(max_length=64, verbose_name='正则URL')
     feature = models.CharField(max_length=16, verbose_name='功能')
@@ -36,9 +41,12 @@ class Permission(models.Model):
 
 class Role(models.Model):
     """ 角色表
-        普通字段： id, ,title
-        关联字段： permissions(多对多)
+    普通字段：
+        id, ,title
+    关联字段：
+        permissions(多对多)
     """
+
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=16, verbose_name='角色名')
 

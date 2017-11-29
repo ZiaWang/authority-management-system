@@ -130,10 +130,11 @@ STATIC_URL = '/static/'
 # rbac
 PERMISSION_DICT = 'permission dict for current user'
 
+# 白名单
 VALID_URLS = [
-    '^login$',
-    '^admin.*'
-]                       # 白名单
+    '^login/$',
+    '^admin./*'
+]
 
 
 
