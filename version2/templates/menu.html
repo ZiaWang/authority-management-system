@@ -1,0 +1,19 @@
+<div class="item-menu">
+    {% for menu in menu_dict.values %}
+        <div class="menu-title">{{ menu.menu_title }}</div>
+        {% if menu.active %}
+            <div class="item-permission">
+        {% else %}
+            <div class="item-permission hide">
+        {% endif %}
+        {% for permission in menu.children %}
+            {% if permission.active %}
+            <p><a class="active" href="{{ permission.url }}">{{ permission.title }}</a></p>
+            {% else %}
+            <p><a href="{{ permission.url }}">{{ permission.title }}</a></p>
+            {% endif %}
+        {% endfor %}
+    </div>
+    </div>
+    {% endfor %}
+</div>

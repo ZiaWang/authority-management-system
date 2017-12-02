@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>登陆</h1>
+
+<form action="/login/" method="post" novalidate>
+    {% csrf_token %}
+    <p>{{ form.username }} {{ form.errors.username.0 }}</p>
+    <p>{{ form.password }} {{ form.errors.password.0 }}</p>
+    <input type="submit" value="登陆">
+</form>
+
+</body>
+</html>

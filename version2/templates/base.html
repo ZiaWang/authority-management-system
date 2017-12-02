@@ -1,0 +1,27 @@
+{% load mytag %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/app/app.css">
+</head>
+<body>
+<div class="menu-left">
+    {% block menu %}
+        {% menu_html request %}
+    {% endblock %}
+</div>
+
+<div class="content">
+    {% block content %}{% endblock %}
+</div>
+
+
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="/static/app/app.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

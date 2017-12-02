@@ -1,0 +1,21 @@
+.menu-left{
+    width: 20%;
+    height: 500px;
+    background-color: cadetblue;
+    float: left;
+}
+
+.content{
+    width: 80%;
+    height: 500px;
+    background-color: beige;
+    float: left;
+}
+
+.hide{
+    display: none;
+}
+
+.active{
+    color: red;
+}
