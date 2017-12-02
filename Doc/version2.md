@@ -113,6 +113,76 @@ id			permission_id		role_id
 #### 项目目录结构
 
 ```
+version2
+│
+│
+│  db.sqlite3
+│  manage.py
+│
+├─app
+│  │  admin.py
+│  │  apps.py
+│  │  models.py
+│  │  tests.py
+│  │  views.py
+│  │  __init__.py
+│  │
+│  ├─migrations
+│  │    __init__.py
+│  │
+│  ├─service
+│  │    forms.py
+│  │  
+│  │ 
+│  │       
+│  │
+│  ├─static
+│  │  └─app
+│  │         app.css
+│  │         app.js
+│  │
+│  ├─templatetags
+│       mytag.py
+│          
+│
+├─rbac
+│  │  admin.py
+│  │  apps.py
+│  │  models.py
+│  │  tests.py
+│  │  views.py
+│  │  __init__.py
+│  │
+│  ├─middlewares
+│  │    loginmd.py
+│  │  
+│  │
+│  ├─migrations
+│  │    0001_initial.py
+│  │    __init__.py
+│  │  
+│  │
+│  ├─service
+│       init_permission.py
+│       __init__.py
+│  
+│
+├─templates
+│      addBook.html
+│      addOrder.html
+│      base.html
+│      home.html
+│      listBooks.html
+│      listOrders.html
+│      login.html
+│      menu.html
+│
+└─version2
+      settings.py
+      urls.py
+      wsgi.py
+      __init__.py
+
 
 ```
 
