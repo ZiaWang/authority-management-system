@@ -1,0 +1,20 @@
+{% for k,item in menu_dict.items %}
+    <div class="item">
+        <div class="item-title">{{ item.menu_title }}</div>
+        {% if item.active %}
+            <div class="item-permission">
+        {% else %}
+            <div class="item-permission hides">
+        {% endif %}
+            {% for v in item.children %}
+                {% if v.active %}
+                    <div><a href="{{ v.url }}" class="active">{{ v.feature }}</a></div>
+                {% else %}
+                    <div><a href="{{ v.url }}">{{ v.feature }}</a></div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    </div>
+{% endfor %}
+
