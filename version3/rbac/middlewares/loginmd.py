@@ -44,7 +44,9 @@ class LoginMiddleware(MiddlewareMixin):
         for url in permission_dict['urls']:
             regex = f'^{url}$'
             if match(pattern=regex, string=current_url):
+                request.session[settings.FEATURE_LIST] = permission_dict['features']
                 flag = True
+                break
 
         if not flag:
             return HttpResponse("你没有权限访问该操作")

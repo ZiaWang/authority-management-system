@@ -16,5 +16,4 @@ def init_permission(user, request):
         permission_dict['features'].append(item['permissions__feature'])
         permission_dict['urls'].append(item['permissions__url'])
 
-    request.session[settings.FEATURE_LIST] = permission_dict['features']
     request.session[settings.PERMISSION_DICT] = permission_dict

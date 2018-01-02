@@ -42,6 +42,7 @@ class LoginMiddleWare(MiddlewareMixin):
         for url in permission_dict['urls']:
             regex = f'^{url}$'
             if re.match(pattern=regex, string=current_url):
+                request.session[settings.FEATURE_LIST] = permission_dict['features']
                 flag = True
                 break
 
