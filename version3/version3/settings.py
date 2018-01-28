@@ -139,3 +139,4 @@ PERMISSION_DICT = 'permission dict'
 
 # menu list
 MENU_LIST = 'menu list'
+
