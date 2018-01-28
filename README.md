@@ -23,12 +23,18 @@
 ##### 版本
 - version1.0
 	- 最简单的一个rbac
+	- [点击查看doc](Doc/version1.md)
+
+- version2.0
+	- 实现了简单菜单功能的rbac
+	- [点击查看doc](Doc/version1.md)
+
+- version3.0
+	- 实现了active功能的rbac
+	- [点击查看doc](Doc/version1.md)
 
 
 
- 
-
-##### DOC
 
 ## 本项目涉及的技术
 - python
